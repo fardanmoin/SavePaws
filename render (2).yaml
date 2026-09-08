@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: savepaws
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.1
